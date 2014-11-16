@@ -20,6 +20,8 @@ import javax.swing.JLabel;
 import java.awt.GridLayout;
 import javax.swing.SpringLayout;
 import javax.swing.UIManager;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 
 public class MainMenu extends JFrame {
@@ -81,8 +83,16 @@ public class MainMenu extends JFrame {
 		menu.add(menuItem);
 		
 		JMenuItem menuItem_1 = new JMenuItem("\u0394\u03B9\u03B1\u03B3\u03C1\u03B1\u03C6\u03AE");
+		
 		menuItem_1.setIcon(new ImageIcon("C:\\Users\\elena\\Desktop\\361\\delete.png"));
 		menu.add(menuItem_1);
+		menuItem_1.addActionListener(new ActionListener() {
+									public void actionPerformed(ActionEvent arg0) {
+											diagrafi.main(null);
+											}
+										}
+									);
+		
 		
 		JMenuItem menuItem_2 = new JMenuItem("\u0395\u03C0\u03B5\u03BE\u03B5\u03C1\u03B3\u03B1\u03C3\u03AF\u03B1");
 		menuItem_2.setIcon(new ImageIcon("C:\\Users\\elena\\Desktop\\361\\pen_paper_2-512.png"));
@@ -93,12 +103,29 @@ public class MainMenu extends JFrame {
 		menu.add(menu_2);
 		
 		JMenuItem menuItem_4 = new JMenuItem("\u039C\u03B5 \u03BA\u03C9\u03B4\u03B9\u03BA\u03CC");
+		menuItem_4.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				anazitisi_me_id.main(null);
+			}
+		});
 		menu_2.add(menuItem_4);
 		
 		JMenuItem menuItem_5 = new JMenuItem("\u039C\u03B5 \u03B8\u03AD\u03C3\u03B7 \u03BA\u03B9\u03B2\u03C9\u03C4\u03AF\u03BF\u03C5");
+		menuItem_5.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				anazitisi_me_thesi.main(null);
+				
+				
+			}
+		});
 		menu_2.add(menuItem_5);
 		
 		JMenuItem menuItem_10 = new JMenuItem("\u03A0\u03C1\u03BF\u03B2\u03BF\u03BB\u03AE");
+		menuItem_10.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				PROJECT.main(null);
+			}
+		});
 		menuItem_10.setIcon(new ImageIcon("C:\\Users\\elena\\Desktop\\361\\view.png"));
 		menu.add(menuItem_10);
 		

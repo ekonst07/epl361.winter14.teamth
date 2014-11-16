@@ -13,11 +13,13 @@ import javax.swing.ImageIcon;
 import java.awt.Color;
 import java.awt.Font;
 import javax.swing.SwingConstants;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 
 
-public class A_γραμμη_στήλη {
+public class �_row_column {
 
-	private JFrame frame;
+	private JFrame frmProject;
 	private JTextField textField;
 	private JTextField txtD;
 	private JTextField txtG;
@@ -27,7 +29,7 @@ public class A_γραμμη_στήλη {
 	private JTextField txtC;
 	private JTextField txtF;
 	private JTextField textField_8;
-	private JButton button;
+	private JButton btnUndo;
 
 	/**
 	 * Launch the application.
@@ -36,8 +38,8 @@ public class A_γραμμη_στήλη {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					A_γραμμη_στήλη window = new A_γραμμη_στήλη();
-					window.frame.setVisible(true);
+					�_row_column window = new �_row_column();
+					window.frmProject.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -48,7 +50,7 @@ public class A_γραμμη_στήλη {
 	/**
 	 * Create the application.
 	 */
-	public A_γραμμη_στήλη() {
+	public �_row_column() {
 		initialize();
 	}
 
@@ -56,16 +58,22 @@ public class A_γραμμη_στήλη {
 	 * Initialize the contents of the frame.
 	 */
 	private void initialize() {
-		frame = new JFrame();
-		frame.setTitle("\u03A0\u03A1\u039F\u0392\u039F\u039B\u0397 ");
-		frame.setBounds(100, 100, 421, 351);
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frmProject = new JFrame();
+		frmProject.setTitle("PROJECT");
+		frmProject.setBounds(100, 100, 421, 351);
+		frmProject.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		SpringLayout springLayout = new SpringLayout();
-		frame.getContentPane().setLayout(springLayout);
+		frmProject.getContentPane().setLayout(springLayout);
 		
 		textField = new JTextField();
-		springLayout.putConstraint(SpringLayout.NORTH, textField, 29, SpringLayout.NORTH, frame.getContentPane());
-		springLayout.putConstraint(SpringLayout.WEST, textField, 10, SpringLayout.WEST, frame.getContentPane());
+		textField.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent arg0) {
+				������.main(null);
+			}
+		});
+		springLayout.putConstraint(SpringLayout.NORTH, textField, 29, SpringLayout.NORTH, frmProject.getContentPane());
+		springLayout.putConstraint(SpringLayout.WEST, textField, 10, SpringLayout.WEST, frmProject.getContentPane());
 		textField.setHorizontalAlignment(SwingConstants.CENTER);
 		textField.setForeground(Color.BLACK);
 		textField.setFont(new Font("Tahoma", Font.BOLD, 14));
@@ -73,43 +81,61 @@ public class A_γραμμη_στήλη {
 		textField.setBackground(Color.LIGHT_GRAY);
 		textField.setEnabled(false);
 		textField.setEditable(false);
-		frame.getContentPane().add(textField);
+		frmProject.getContentPane().add(textField);
 		textField.setColumns(10);
 		
 		txtD = new JTextField();
-		springLayout.putConstraint(SpringLayout.NORTH, txtD, 91, SpringLayout.NORTH, frame.getContentPane());
+		txtD.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent arg0) {
+				������.main(null);
+			}
+		});
+		springLayout.putConstraint(SpringLayout.NORTH, txtD, 91, SpringLayout.NORTH, frmProject.getContentPane());
 		springLayout.putConstraint(SpringLayout.SOUTH, textField, -6, SpringLayout.NORTH, txtD);
 		springLayout.putConstraint(SpringLayout.EAST, textField, 0, SpringLayout.EAST, txtD);
-		springLayout.putConstraint(SpringLayout.EAST, txtD, 96, SpringLayout.WEST, frame.getContentPane());
+		springLayout.putConstraint(SpringLayout.EAST, txtD, 96, SpringLayout.WEST, frmProject.getContentPane());
 		txtD.setHorizontalAlignment(SwingConstants.CENTER);
 		txtD.setFont(new Font("Tahoma", Font.BOLD, 14));
 		txtD.setText("2,1");
-		springLayout.putConstraint(SpringLayout.WEST, txtD, 10, SpringLayout.WEST, frame.getContentPane());
+		springLayout.putConstraint(SpringLayout.WEST, txtD, 10, SpringLayout.WEST, frmProject.getContentPane());
 		txtD.setEnabled(false);
 		txtD.setEditable(false);
 		txtD.setColumns(10);
 		txtD.setBackground(Color.LIGHT_GRAY);
-		frame.getContentPane().add(txtD);
+		frmProject.getContentPane().add(txtD);
 		
 		txtG = new JTextField();
+		txtG.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent arg0) {
+				������.main(null);
+			}
+		});
 		springLayout.putConstraint(SpringLayout.SOUTH, txtD, -6, SpringLayout.NORTH, txtG);
-		springLayout.putConstraint(SpringLayout.EAST, txtG, 96, SpringLayout.WEST, frame.getContentPane());
+		springLayout.putConstraint(SpringLayout.EAST, txtG, 96, SpringLayout.WEST, frmProject.getContentPane());
 		txtG.setFont(new Font("Tahoma", Font.BOLD, 14));
 		txtG.setText("3,1");
 		txtG.setHorizontalAlignment(SwingConstants.CENTER);
-		springLayout.putConstraint(SpringLayout.SOUTH, txtG, 209, SpringLayout.NORTH, frame.getContentPane());
-		springLayout.putConstraint(SpringLayout.NORTH, txtG, 153, SpringLayout.NORTH, frame.getContentPane());
-		springLayout.putConstraint(SpringLayout.WEST, txtG, 10, SpringLayout.WEST, frame.getContentPane());
+		springLayout.putConstraint(SpringLayout.SOUTH, txtG, 209, SpringLayout.NORTH, frmProject.getContentPane());
+		springLayout.putConstraint(SpringLayout.NORTH, txtG, 153, SpringLayout.NORTH, frmProject.getContentPane());
+		springLayout.putConstraint(SpringLayout.WEST, txtG, 10, SpringLayout.WEST, frmProject.getContentPane());
 		txtG.setEnabled(false);
 		txtG.setEditable(false);
 		txtG.setColumns(10);
 		txtG.setBackground(Color.LIGHT_GRAY);
-		frame.getContentPane().add(txtG);
+		frmProject.getContentPane().add(txtG);
 		
 		textField_1 = new JTextField();
-		springLayout.putConstraint(SpringLayout.NORTH, textField_1, 29, SpringLayout.NORTH, frame.getContentPane());
+		textField_1.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent arg0) {
+				������.main(null);
+			}
+		});
+		springLayout.putConstraint(SpringLayout.NORTH, textField_1, 29, SpringLayout.NORTH, frmProject.getContentPane());
 		springLayout.putConstraint(SpringLayout.WEST, textField_1, 6, SpringLayout.EAST, textField);
-		springLayout.putConstraint(SpringLayout.EAST, textField_1, -217, SpringLayout.EAST, frame.getContentPane());
+		springLayout.putConstraint(SpringLayout.EAST, textField_1, -217, SpringLayout.EAST, frmProject.getContentPane());
 		textField_1.setFont(new Font("Tahoma", Font.BOLD, 14));
 		textField_1.setHorizontalAlignment(SwingConstants.CENTER);
 		textField_1.setText("1,2");
@@ -117,9 +143,15 @@ public class A_γραμμη_στήλη {
 		textField_1.setEditable(false);
 		textField_1.setColumns(10);
 		textField_1.setBackground(Color.LIGHT_GRAY);
-		frame.getContentPane().add(textField_1);
+		frmProject.getContentPane().add(textField_1);
 		
 		textField_2 = new JTextField();
+		textField_2.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent arg0) {
+				������.main(null);
+			}
+		});
 		textField_2.setFont(new Font("Tahoma", Font.BOLD, 14));
 		textField_2.setText("2,2");
 		textField_2.setHorizontalAlignment(SwingConstants.CENTER);
@@ -127,14 +159,20 @@ public class A_γραμμη_στήλη {
 		springLayout.putConstraint(SpringLayout.SOUTH, textField_2, 0, SpringLayout.SOUTH, txtD);
 		springLayout.putConstraint(SpringLayout.NORTH, textField_2, 2, SpringLayout.NORTH, txtD);
 		springLayout.putConstraint(SpringLayout.WEST, textField_2, 6, SpringLayout.EAST, txtD);
-		springLayout.putConstraint(SpringLayout.EAST, textField_2, -217, SpringLayout.EAST, frame.getContentPane());
+		springLayout.putConstraint(SpringLayout.EAST, textField_2, -217, SpringLayout.EAST, frmProject.getContentPane());
 		textField_2.setEnabled(false);
 		textField_2.setEditable(false);
 		textField_2.setColumns(10);
 		textField_2.setBackground(Color.LIGHT_GRAY);
-		frame.getContentPane().add(textField_2);
+		frmProject.getContentPane().add(textField_2);
 		
 		txtH = new JTextField();
+		txtH.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent arg0) {
+				������.main(null);
+			}
+		});
 		springLayout.putConstraint(SpringLayout.EAST, txtH, 92, SpringLayout.EAST, txtG);
 		txtH.setFont(new Font("Tahoma", Font.BOLD, 14));
 		txtH.setHorizontalAlignment(SwingConstants.CENTER);
@@ -146,13 +184,19 @@ public class A_γραμμη_στήλη {
 		txtH.setEditable(false);
 		txtH.setColumns(10);
 		txtH.setBackground(Color.LIGHT_GRAY);
-		frame.getContentPane().add(txtH);
+		frmProject.getContentPane().add(txtH);
 		
 		txtC = new JTextField();
+		txtC.addMouseListener(new MouseAdapter() {
+			@Override
+		public void mouseClicked(MouseEvent arg0) {
+				������.main(null);
+			}
+		});
 		springLayout.putConstraint(SpringLayout.NORTH, txtC, 0, SpringLayout.NORTH, textField);
 		springLayout.putConstraint(SpringLayout.WEST, txtC, 6, SpringLayout.EAST, textField_1);
 		springLayout.putConstraint(SpringLayout.SOUTH, txtC, 0, SpringLayout.SOUTH, textField);
-		springLayout.putConstraint(SpringLayout.EAST, txtC, -125, SpringLayout.EAST, frame.getContentPane());
+		springLayout.putConstraint(SpringLayout.EAST, txtC, -125, SpringLayout.EAST, frmProject.getContentPane());
 		txtC.setHorizontalAlignment(SwingConstants.CENTER);
 		txtC.setFont(new Font("Tahoma", Font.BOLD, 14));
 		txtC.setText("1,3");
@@ -160,23 +204,35 @@ public class A_γραμμη_στήλη {
 		txtC.setEditable(false);
 		txtC.setColumns(10);
 		txtC.setBackground(Color.LIGHT_GRAY);
-		frame.getContentPane().add(txtC);
+		frmProject.getContentPane().add(txtC);
 		
 		txtF = new JTextField();
+		txtF.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent arg0) {
+				������.main(null);
+			}
+		});
 		txtF.setHorizontalAlignment(SwingConstants.CENTER);
 		txtF.setText("2,3");
 		txtF.setFont(new Font("Tahoma", Font.BOLD, 14));
 		springLayout.putConstraint(SpringLayout.NORTH, txtF, 2, SpringLayout.NORTH, txtD);
 		springLayout.putConstraint(SpringLayout.WEST, txtF, 6, SpringLayout.EAST, textField_2);
 		springLayout.putConstraint(SpringLayout.SOUTH, txtF, 0, SpringLayout.SOUTH, txtD);
-		springLayout.putConstraint(SpringLayout.EAST, txtF, -125, SpringLayout.EAST, frame.getContentPane());
+		springLayout.putConstraint(SpringLayout.EAST, txtF, -125, SpringLayout.EAST, frmProject.getContentPane());
 		txtF.setEnabled(false);
 		txtF.setEditable(false);
 		txtF.setColumns(10);
 		txtF.setBackground(Color.LIGHT_GRAY);
-		frame.getContentPane().add(txtF);
+		frmProject.getContentPane().add(txtF);
 		
 		textField_8 = new JTextField();
+		textField_8.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent arg0) {
+				������.main(null);
+			}
+		});
 		springLayout.putConstraint(SpringLayout.NORTH, textField_8, 0, SpringLayout.NORTH, txtH);
 		springLayout.putConstraint(SpringLayout.WEST, textField_8, 6, SpringLayout.EAST, txtH);
 		springLayout.putConstraint(SpringLayout.SOUTH, textField_8, 0, SpringLayout.SOUTH, txtG);
@@ -188,11 +244,11 @@ public class A_γραμμη_στήλη {
 		textField_8.setEditable(false);
 		textField_8.setColumns(10);
 		textField_8.setBackground(Color.LIGHT_GRAY);
-		frame.getContentPane().add(textField_8);
+		frmProject.getContentPane().add(textField_8);
 		
-		button = new JButton("\u03A0\u0399\u03A3\u03A9");
-		springLayout.putConstraint(SpringLayout.NORTH, button, 32, SpringLayout.SOUTH, txtG);
-		springLayout.putConstraint(SpringLayout.WEST, button, 0, SpringLayout.WEST, textField);
-		frame.getContentPane().add(button);
+		btnUndo = new JButton("UNDO");
+		springLayout.putConstraint(SpringLayout.NORTH, btnUndo, 32, SpringLayout.SOUTH, txtG);
+		springLayout.putConstraint(SpringLayout.WEST, btnUndo, 0, SpringLayout.WEST, textField);
+		frmProject.getContentPane().add(btnUndo);
 	}
 }

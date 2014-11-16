@@ -15,7 +15,7 @@ import java.awt.Font;
 import javax.swing.SwingConstants;
 
 
-public class ΞΏΟΞΏΟ†ΞΏΞΉ {
+public class οροφοι {
 
 	private JFrame frame;
 	private JTextField textField;
@@ -30,7 +30,7 @@ public class ΞΏΟΞΏΟ†ΞΏΞΉ {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					ΞΏΟΞΏΟ†ΞΏΞΉ window = new ΞΏΟΞΏΟ†ΞΏΞΉ();
+					οροφοι window = new οροφοι();
 					window.frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -42,7 +42,7 @@ public class ΞΏΟΞΏΟ†ΞΏΞΉ {
 	/**
 	 * Create the application.
 	 */
-	public ΞΏΟΞΏΟ†ΞΏΞΉ() {
+	public οροφοι() {
 		initialize();
 	}
 

@@ -194,57 +194,56 @@ public class PROJECT {
 		textField.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent arg0) {
-				Î‘_row_column.main(null);
+				Á_row_column.main(null);
 			}
 		});
 		textField_1.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent arg0) {
-				Î‘_row_column.main(null);
+				Á_row_column.main(null);
 			}
 		});
 		textField_2.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent arg0) {
-				Î‘_row_column.main(null);
+				Á_row_column.main(null);
 			}
 		});
 		textField_3.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent arg0) {
-				Î‘_row_column.main(null);
+				Á_row_column.main(null);
 			}
 		});
 		textField_4.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent arg0) {
-				Î‘_row_column.main(null);
+				Á_row_column.main(null);
 			}
 		});
 		textField_5.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent arg0) {
-				Î‘_row_column.main(null);
+				Á_row_column.main(null);
 			}
 		});
 		textField_6.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent arg0) {
-				Î‘_row_column.main(null);
+				Á_row_column.main(null);
 			}
 		});
 		textField_7.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent arg0) {
-				Î‘_row_column.main(null);
+				Á_row_column.main(null);
 			}
 		});
 		textField_8.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent arg0) {
-				Î‘_row_column.main(null);
+				Á_row_column.main(null);
 			}
 		});
 	}
 }
-

@@ -17,9 +17,7 @@ public class anazitisi_me_id {
 	private JFrame frame;
 	private JTextField textidbox;
 
-	/**
-	 * Launch the application.
-	 */
+	
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
@@ -33,16 +31,11 @@ public class anazitisi_me_id {
 		});
 	}
 
-	/**
-	 * Create the application.
-	 */
 	public anazitisi_me_id() {
 		initialize();
 	}
 
-	/**
-	 * Initialize the contents of the frame.
-	 */
+	
 	private void initialize() {
 		frame = new JFrame();
 		frame.setTitle("\u0391\u039D\u0391\u0396\u0397\u03A4\u0397\u03A3\u0397 \u039C\u0395 \u0392\u0391\u03A3\u0397 TO ID");

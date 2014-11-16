@@ -66,6 +66,7 @@ public class diagrafi {
 		springLayout.putConstraint(SpringLayout.EAST, btnCancel, -33, SpringLayout.EAST, frame.getContentPane());
 		frame.getContentPane().add(btnCancel);
 		
+		
 		textidbox = new JTextField();
 		springLayout.putConstraint(SpringLayout.WEST, textidbox, -126, SpringLayout.EAST, btnCancel);
 		springLayout.putConstraint(SpringLayout.SOUTH, textidbox, -81, SpringLayout.NORTH, btnCancel);
